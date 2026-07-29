@@ -29,11 +29,11 @@ extension Clients {
   protocol AppConnectionsServiceStub {
     func listAppConnections(
       request: ListAppConnectionsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudBeyondcorpAppconnectionsV1.ListAppConnectionsResponse
+    ) async throws -> GoogleCloudBeyondCorpAppConnectionsV1.ListAppConnectionsResponse
 
     func getAppConnection(
       request: GetAppConnectionRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudBeyondcorpAppconnectionsV1.AppConnection
+    ) async throws -> GoogleCloudBeyondCorpAppConnectionsV1.AppConnection
 
     func createAppConnection(
       request: CreateAppConnectionRequest, options: GoogleCloudGax.RequestOptions
@@ -49,7 +49,7 @@ extension Clients {
 
     func resolveAppConnections(
       request: ResolveAppConnectionsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudBeyondcorpAppconnectionsV1.ResolveAppConnectionsResponse
+    ) async throws -> GoogleCloudBeyondCorpAppConnectionsV1.ResolveAppConnectionsResponse
 
     func listLocations(
       request: GoogleCloudLocation.ListLocationsRequest, options: GoogleCloudGax.RequestOptions
@@ -98,7 +98,7 @@ extension Clients {
 
     public func listAppConnections(
       request: ListAppConnectionsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudBeyondcorpAppconnectionsV1.ListAppConnectionsResponse {
+    ) async throws -> GoogleCloudBeyondCorpAppConnectionsV1.ListAppConnectionsResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -118,12 +118,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudBeyondcorpAppconnectionsV1.ListAppConnectionsResponse.self, from: data)
+        GoogleCloudBeyondCorpAppConnectionsV1.ListAppConnectionsResponse.self, from: data)
     }
 
     public func getAppConnection(
       request: GetAppConnectionRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudBeyondcorpAppconnectionsV1.AppConnection {
+    ) async throws -> GoogleCloudBeyondCorpAppConnectionsV1.AppConnection {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -138,7 +138,7 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudBeyondcorpAppconnectionsV1.AppConnection.self, from: data)
+        GoogleCloudBeyondCorpAppConnectionsV1.AppConnection.self, from: data)
     }
 
     public func createAppConnection(
@@ -226,7 +226,7 @@ extension Clients {
 
     public func resolveAppConnections(
       request: ResolveAppConnectionsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudBeyondcorpAppconnectionsV1.ResolveAppConnectionsResponse {
+    ) async throws -> GoogleCloudBeyondCorpAppConnectionsV1.ResolveAppConnectionsResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -245,7 +245,7 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudBeyondcorpAppconnectionsV1.ResolveAppConnectionsResponse.self, from: data)
+        GoogleCloudBeyondCorpAppConnectionsV1.ResolveAppConnectionsResponse.self, from: data)
     }
 
     public func listLocations(

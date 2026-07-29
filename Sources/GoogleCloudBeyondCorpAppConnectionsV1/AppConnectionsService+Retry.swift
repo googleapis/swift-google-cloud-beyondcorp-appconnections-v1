@@ -54,14 +54,14 @@ extension Clients {
 
     public func listAppConnections(
       request: ListAppConnectionsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudBeyondcorpAppconnectionsV1.ListAppConnectionsResponse {
+    ) async throws -> GoogleCloudBeyondCorpAppConnectionsV1.ListAppConnectionsResponse {
       try await self._intercept(
         request: request,
         options: options,
         idempotent: true,
         action: {
           (r: ListAppConnectionsRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudBeyondcorpAppconnectionsV1.ListAppConnectionsResponse
+            -> GoogleCloudBeyondCorpAppConnectionsV1.ListAppConnectionsResponse
           in
           return try await self.inner.listAppConnections(request: r, options: o)
         })
@@ -69,14 +69,14 @@ extension Clients {
 
     public func getAppConnection(
       request: GetAppConnectionRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudBeyondcorpAppconnectionsV1.AppConnection {
+    ) async throws -> GoogleCloudBeyondCorpAppConnectionsV1.AppConnection {
       try await self._intercept(
         request: request,
         options: options,
         idempotent: true,
         action: {
           (r: GetAppConnectionRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudBeyondcorpAppconnectionsV1.AppConnection
+            -> GoogleCloudBeyondCorpAppConnectionsV1.AppConnection
           in
           return try await self.inner.getAppConnection(request: r, options: o)
         })
@@ -129,14 +129,14 @@ extension Clients {
 
     public func resolveAppConnections(
       request: ResolveAppConnectionsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudBeyondcorpAppconnectionsV1.ResolveAppConnectionsResponse {
+    ) async throws -> GoogleCloudBeyondCorpAppConnectionsV1.ResolveAppConnectionsResponse {
       try await self._intercept(
         request: request,
         options: options,
         idempotent: true,
         action: {
           (r: ResolveAppConnectionsRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudBeyondcorpAppconnectionsV1.ResolveAppConnectionsResponse
+            -> GoogleCloudBeyondCorpAppConnectionsV1.ResolveAppConnectionsResponse
           in
           return try await self.inner.resolveAppConnections(request: r, options: o)
         })
